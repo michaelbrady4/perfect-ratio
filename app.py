@@ -9,11 +9,11 @@ def index():
 
 @app.route('/', methods=['POST'])
 def handle_form_submission():
-    text1 = request.form['text1']
-    text2 = request.form['text2']
+    username = request.form['username']
+    password = request.form['password']
 
     # Call your Python script here and pass it text1 and text2 as arguments
-    result = get_big_timers(text1, text2)
+    result = get_big_timers(username, password)
     # Store the returned list of strings in a variable called `result`
 
     return render_template('index.html', result=result)

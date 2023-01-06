@@ -2,10 +2,10 @@
 import instaloader
 
 
-def get_big_timers(text1: str, text2: str) -> list:
+def get_big_timers(username: str, password: str) -> list:
     # Username and password
-    USERNAME = text1
-    PASSWORD = text2
+    USERNAME = username
+    PASSWORD = password
 
     # Get instance
     L = instaloader.Instaloader()

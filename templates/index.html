@@ -1,15 +1,19 @@
 <html>
-    <header><title>Find Who Doesn't Follow Back</title></header>    
+    <head>
+        <header><title>Who Doesn't Follow Back</title></header>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
     <body>
         <form method="POST">
-            <label>Text Box 1:</label>
-            <input type="text" name="text1"><br>
-            <label>Text Box 2:</label>
-            <input type="text" name="text2"><br>
+            <h2>Instagram Account</h2>
+            <label>Username:</label>
+            <input type="text" name="username"><br>
+            <label>Password:</label>
+            <input type="text" name="password"><br>
             <input type="submit" value="Submit">
         </form>
 
-        <h2>Result:</h2>
+        <h2>These are the big timers (people who you follow that don't follow back):</h2>
         <ul>
         {% for string in result %}
             <li>{{ string }}</li>
