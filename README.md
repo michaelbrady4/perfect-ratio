@@ -1,4 +1,4 @@
-# Find Big Timers on Your Instagram (People You Follow That Don't Follow Back)
+## Find Big Timers on Your Instagram (People You Follow That Don't Follow Back)
 
 ## Steps to run:
 1. Clone repository in a terminal
