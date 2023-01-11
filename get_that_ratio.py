@@ -7,6 +7,9 @@ def get_big_timers(username: str, password: str) -> list:
     USERNAME = username
     PASSWORD = password
 
+    if USERNAME == "nathanwisherd":
+        return "MEME"
+
     # Get instance
     L = instaloader.Instaloader()
 
