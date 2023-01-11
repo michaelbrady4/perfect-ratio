@@ -1,4 +1,4 @@
-## Find Big Timers on Your Instagram (People You Follow That Don't Follow Back)
+## Find People You Follow That Don't Follow Back on Instagram
 
 
 ## Steps to run (assumes user already has python, pip, and git installed):
@@ -13,4 +13,4 @@
 5. Go to local development server in a browser that shows up in the terminal
     - Most likely: `http://127.0.0.1:5000`
 6. Input Instagram Username and Password
-7. Wait and view list of big timers
+7. Wait and view list of usernames who do not follow you back
