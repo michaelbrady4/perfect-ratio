@@ -28,9 +28,9 @@ def get_big_timers(username: str, password: str) -> list:
     #     followees.append(followee.username)
 
     # Add each username that follows you to a list
-    # followers = []
-    # for follower in profile.get_followers():
-    #     followers.append(follower.username)
+    followers = []
+    for follower in profile.get_followers():
+        followers.append(follower.username)
 
     # print(f"Number of people you follow: {len(followees)}")
     # print(f"Number of people who follow you: {len(followers)}")
@@ -46,8 +46,8 @@ def get_big_timers(username: str, password: str) -> list:
     # return big_timers
 
     # Rework logic to be faster
-    for name in profile.get_followees():
-        if name not in profile.get_followers():
-            big_timers.append(name)
+    for followee in profile.get_followees():
+        if followee.username not in followers:
+            big_timers.append(followee.username)
     
     return big_timers
