@@ -7,8 +7,8 @@ def get_big_timers(username: str, password: str) -> list:
     USERNAME = username
     PASSWORD = password
 
-    if USERNAME == "nathanwisherd":
-        return "MEME"
+    # if USERNAME == "nathanwisherd":
+    #     return "MEME"
 
     # Get instance
     L = instaloader.Instaloader()
@@ -23,14 +23,14 @@ def get_big_timers(username: str, password: str) -> list:
     profile = instaloader.Profile.from_username(L.context, USERNAME)
 
     # Add each username that you follow to a list
-    followees = []
-    for followee in profile.get_followees():
-        followees.append(followee.username)
+    # followees = []
+    # for followee in profile.get_followees():
+    #     followees.append(followee.username)
 
     # Add each username that follows you to a list
-    followers = []
-    for follower in profile.get_followers():
-        followers.append(follower.username)
+    # followers = []
+    # for follower in profile.get_followers():
+    #     followers.append(follower.username)
 
     # print(f"Number of people you follow: {len(followees)}")
     # print(f"Number of people who follow you: {len(followers)}")
@@ -38,9 +38,16 @@ def get_big_timers(username: str, password: str) -> list:
     # People who don't follow you back
     big_timers = []
     # print("These are the people who do not follow you back:")
-    for name in followees:
-        if name not in followers:
-            big_timers.append(name)
+    # for name in followees:
+    #     if name not in followers:
+    #         big_timers.append(name)
             # print(name)
+    
+    # return big_timers
+
+    # Rework logic to be faster
+    for name in profile.get_followees():
+        if name not in profile.get_followers():
+            big_timers.append(name)
     
     return big_timers
